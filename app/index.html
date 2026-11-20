@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger v2 — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <h1>LEONIDA <span>LEDGER</span> <em>v2</em></h1>
+    <p class="tagline">Every GTA VI trophy on PlayStation 5 — official names, cited guides, a roadmap to platinum, and a tracker that remembers.</p>
+  </div>
+</header>
+<div id="audit-strip" class="audit-strip" aria-label="Audit strip">Checking the data…</div>
+
+<main>
+  <section class="controls" aria-label="Tracker controls">
+    <div class="progress-wrap">
+      <div class="progress-label"><span id="progress-text">0 / 55 earned</span><span id="progress-pct">0%</span></div>
+      <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
+    </div>
+    <div class="control-row">
+      <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+      <div class="filters" id="filters" role="group" aria-label="Filter by kind">
+        <button data-kind="all" class="filter active">All</button>
+        <button data-kind="story" class="filter">Story</button>
+        <button data-kind="missable" class="filter">Missable</button>
+        <button data-kind="collectibles" class="filter">Collectibles</button>
+        <button data-kind="activities" class="filter">Activities</button>
+        <button data-kind="online" class="filter">Online</button>
+      </div>
+      <label class="toggle"><input id="spoiler" type="checkbox"> Spoiler-safe</label>
+      <label class="toggle"><input id="earned-only" type="checkbox"> Earned only</label>
+    </div>
+    <div class="control-row">
+      <button id="export-btn" class="btn">Export progress</button>
+      <button id="import-btn" class="btn">Import progress</button>
+      <input id="import-file" type="file" accept=".json,application/json" hidden>
+      <button id="reset-btn" class="btn danger">Reset progress</button>
+      <span class="hint">Progress saves in this browser (localStorage). Export keeps a backup file.</span>
+    </div>
+    <p class="howto">How to use: tick a trophy when you earn it, open it to read its guide and sources, and follow the roadmap stages in order. Turn on Spoiler-safe to hide story trophy names until you earn them. Missable trophies are flagged in red — earn them before the story moves on.</p>
+  </section>
+
+  <section class="roadmap" aria-label="Roadmap to platinum">
+    <h2>Roadmap to Platinum</h2>
+    <p class="section-note">Six stages, in the order to earn them. Missable trophies live in stages 1, 2 and 5 — do those before the story moves on.</p>
+    <ol id="roadmap-list" class="roadmap-list"></ol>
+  </section>
+
+  <div class="two-col">
+    <section class="checklist" aria-label="Trophy checklist">
+      <h2>Trophy Checklist <span id="list-count" class="count"></span></h2>
+      <ul id="trophy-list" class="trophy-list"></ul>
+    </section>
+    <section class="guide-panel" aria-label="Selected trophy guide">
+      <h2>Guide</h2>
+      <div id="guide-panel" class="guide-body">
+        <p class="empty">Select a trophy from the checklist to see its guide, its steps, and each step's source.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="matrix" aria-label="Source matrix">
+    <h2>Source Matrix</h2>
+    <p class="section-note">Every step in this guide cites its source. The matrix shows which sources support each trophy — a mark means at least one step of that trophy cites that source.</p>
+    <div class="matrix-scroll"><table id="matrix-table" class="matrix-table"></table></div>
+  </section>
+
+  <section class="sources" aria-label="Sources">
+    <h2>Sources <span id="sources-count" class="count"></span></h2>
+    <p class="section-note">Nine dated sources. Every guide step names one of them; follow a link to read the source itself. Guide text is this entry's own words — sources are cited, never copied.</p>
+    <ul id="sources-list" class="sources-list"></ul>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Ledger v2 — an offline guide. No Rockstar logo, artwork or game screenshots. Trophy names and descriptions are shown as PlayStation publishes them; all guide text is original. Works with the network off.</p>
+</footer>
+<script type="module" src="src/app.js"></script>
+</body>
+</html>
